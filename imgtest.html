@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title></title>
+		<script src="js/jquery-1.9.0.min.js"></script>
+		<script src="js/jquery.lazyload.js"></script>
+		<!--<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>-->
+		<style type="text/css">
+			#container{
+				height: 500px;
+				overflow: scroll;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<img class="lazyload" src="img/0.jpg" data-original="img/1.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/2.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/3.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/4.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/5.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/6.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/7.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/8.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/9.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/10.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/11.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/12.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/13.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/14.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/15.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/16.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/17.jpg" width="300" heigh="300">
+			<img class="lazyload" src="img/0.jpg" data-original="img/18.jpg" width="300" heigh="300">
+		</div>
+		
+		
+	
+	</body>
+</html>
+
+	<script>
+	
+//		 $(function() {
+//	          $("img.lazy").lazyload({
+//	              event: "scrollstop"
+//	          });
+//	      });
+
+//	      window.addEventListener("load", function(event) {
+//			    let timeout = setTimeout(function() {
+//			    	console.log('is 5000');
+//			        lazyload();
+//			    }, 5000);
+//			});
+			
+//			event : "click"   //通过点击进行图片加载
+//			$(function(){
+//				$('img').lazyload({
+//					effect:'fadeIn',
+//					event : "sporty"
+//					
+//				});
+//			});
+			
+			//event : "sporty" //延迟5s后加载
+//		$(window).bind("load", function() {    
+//			var timeout = setTimeout(function() {$("img").trigger("sporty")}, 5000);    
+//		});  
+		
+		$(function(){
+			$("img").lazyload({    
+				placeholder : "img/0.jpg",    
+				container: $("#container")    
+			});   
+			//x循环检测图片是否在可视区域内,依次加载图片
+			$("img").lazyload({    
+				failurelimit : 10    
+			});   
+
+		})	
+		
+		</script>
